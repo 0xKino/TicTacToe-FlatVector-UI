@@ -1,14 +1,14 @@
-import  { initializeApp } from 'firebase/app';
+import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBdnGQaPIUvfg8_4OiWBQJSDxdZe03IAjE",
-  authDomain: "tic-tac-toe-pvp-demo.firebaseapp.com",
-  projectId: "tic-tac-toe-pvp-demo",
-  storageBucket: "tic-tac-toe-pvp-demo.appspot.com",
-  messagingSenderId: "423697050153",
-  appId: "1:423697050153:web:e8d89de31d15c8cef45e80"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
