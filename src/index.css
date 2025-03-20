@@ -1,0 +1,50 @@
+@import  url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  @apply bg-background text-primary font-sans antialiased;
+  background-image: url('https://images.unsplash.com/photo-1569470451072-68314f596aec?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwxfHxtaW5pbWFsJTIwdGljJTIwdGFjJTIwdG9lJTIwb3V0bGluZSUyMGljb24lMjBibGFjayUyMGFuZCUyMHdoaXRlfGVufDB8fHx8MTc0MjQ1MzI1OXww&ixlib=rb-4.0.3');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-300 focus:outline-none;
+  }
+  
+  .btn-primary {
+    @apply border border-white/20 bg-white/5 hover:bg-white/10 text-white backdrop-blur-sm;
+  }
+  
+  .btn-icon {
+    @apply p-2 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-white backdrop-blur-sm;
+  }
+  
+  .game-cell {
+    @apply flex items-center justify-center border border-white/10 bg-black/20 backdrop-blur-sm transition-all duration-300;
+  }
+  
+  .game-cell:hover {
+    @apply bg-white/5;
+  }
+  
+  .game-grid {
+    @apply grid grid-cols-3 gap-px bg-white/10 rounded-lg p-px backdrop-blur-md;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+  }
+}
+ 
